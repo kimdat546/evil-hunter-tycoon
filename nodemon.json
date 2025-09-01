@@ -1,0 +1,6 @@
+{
+  "watch": ["src/server"],
+  "ext": "js,ts",
+  "ignore": ["src/client"],
+  "exec": "node src/server/index.js"
+}

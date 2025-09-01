@@ -1,0 +1,32 @@
+{
+  "name": "ai-hero-tycoon",
+  "version": "0.1.0",
+  "description": "AI-powered hero management tycoon game",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon src/server/index.js",
+    "client:dev": "vite src/client",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build src/client",
+    "build:server": "tsc --project tsconfig.server.json",
+    "start": "node dist/server/index.js"
+  },
+  "keywords": ["game", "tycoon", "ai", "pixijs", "heroes"],
+  "author": "Developer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pixi.js": "^8.0.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "ts-node": "^10.9.2"
+  }
+}
