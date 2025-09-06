@@ -1,6 +1,9 @@
 {
-  "watch": ["src/server"],
-  "ext": "js,ts",
-  "ignore": ["src/client"],
-  "exec": "node src/server/index.js"
+  "watch": ["src/server", "src/shared"],
+  "ext": "ts,js,json",
+  "ignore": ["src/client/**/*", "dist/**/*", "node_modules/**/*"],
+  "exec": "tsx src/server/index.ts",
+  "env": {
+    "NODE_ENV": "development"
+  }
 }
